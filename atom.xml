@@ -4,9 +4,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://zeshawne.github.io/"/>
   <updated>2016-08-04T08:36:02.457Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://zeshawne.github.io/</id>
   
   <author>
     <name>stone</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>简易版连接池</title>
-    <link href="http://yoursite.com/2016/07/04/%E7%AE%80%E6%98%93%E7%89%88%E8%BF%9E%E6%8E%A5%E6%B1%A0/"/>
-    <id>http://yoursite.com/2016/07/04/简易版连接池/</id>
+    <link href="https://zeshawne.github.io/2016/07/04/%E7%AE%80%E6%98%93%E7%89%88%E8%BF%9E%E6%8E%A5%E6%B1%A0/"/>
+    <id>https://zeshawne.github.io/2016/07/04/简易版连接池/</id>
     <published>2016-07-04T12:01:55.000Z</published>
     <updated>2016-08-04T08:36:02.457Z</updated>
     
@@ -33,12 +33,12 @@
     
     </summary>
     
-      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="https://zeshawne.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="生活" scheme="http://yoursite.com/tags/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="https://zeshawne.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
     
-      <category term="学习" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="https://zeshawne.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   

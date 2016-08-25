@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zeshawne.github.io/"/>
-  <updated>2016-08-04T08:36:02.457Z</updated>
+  <updated>2016-08-25T15:41:02.609Z</updated>
   <id>https://zeshawne.github.io/</id>
   
   <author>
@@ -14,6 +14,62 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>metaQ + zookeeper</title>
+    <link href="https://zeshawne.github.io/2016/08/25/metaQ%20+%20zookeeper/"/>
+    <id>https://zeshawne.github.io/2016/08/25/metaQ + zookeeper/</id>
+    <published>2016-08-25T15:00:12.000Z</published>
+    <updated>2016-08-25T15:41:02.609Z</updated>
+    
+    <content type="html">&lt;hr&gt;
+&lt;p&gt;##介绍&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;metaQ淘宝开源的一个Java消息中间件,它参考kafka并在其基础上做了许多改进优化.&lt;br&gt;具体介绍请看&lt;a href=&quot;https://github.com/killme2008/Metamorphosis/wiki&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Metamorphosis-wiki&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;##下载&lt;br&gt;&lt;a href=&quot;https://code.google.com/archive/p/meta-queue/downloads&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;点击此处下载metaQ&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;##配置&lt;br&gt;解压下载后的压缩包,其目录结构为:&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;21&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;22&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;23&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;24&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;25&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;26&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;27&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;28&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;29&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;30&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;31&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;32&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;33&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;├─bin&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      env.bat&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      env.sh&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      localMetaServer.bat&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      log4j.properties&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      metaServer.bat&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      metaServer.sh&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      tools_log4j.properties&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├─conf&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      async_slave.properties&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      gregor_slave.properties&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      jettyBroker.properties&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      notifyadaper&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      notifySlave.properties&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      sample.server.ini&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      samsa_master.properties&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      server.ini&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      timetunnel.properties&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├─lib&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      ...&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      zkclient-0.3.jar&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      zookeeper-3.4.3.jar&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├─logs&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      metaServer.log&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      slave.log&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      timetunnel.log&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      transfer.log&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;└─provided&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        README`&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;通过bin/&lt;code&gt;metaServer.sh&lt;/code&gt;启动服务,主要的配置文件为server.ini,可参考sample.server.ini配置,sample.server.ini有中文注释,解释的比较清楚,就不多啰嗦了.&lt;/p&gt;
+&lt;p&gt;默认的server.ini默认配置了一个topic,可以自己添加.&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;;; Topics section&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;[topic=meta-test]&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;确保机器装了JDK并正确设置了&lt;code&gt;JAVA_PATH&lt;/code&gt;和&lt;code&gt;PATH&lt;/code&gt;变量.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;启动服务:&lt;br&gt;bin/metaServer.sh start local&lt;/p&gt;
+&lt;p&gt;关闭服务:&lt;br&gt;bin/metaServer.sh stop&lt;/p&gt;
+&lt;p&gt;更多:&lt;br&gt;bin/metaServer.sh help&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;windows不支持local模式,需要单独配置zookeeper.&lt;/p&gt;
+&lt;p&gt;##集群配置&lt;/p&gt;
+&lt;p&gt;###zookeeper配置&lt;br&gt;&lt;a href=&quot;https://zookeeper.apache.org/releases.html#download&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;点击此处下载zookeeper&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;参考conf/&lt;code&gt;server_sample.ini&lt;/code&gt;配置conf/&lt;code&gt;server_.ini&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;###Local metaQ集群配置&lt;br&gt;复制metaQ目录到不同目录,更改conf/&lt;code&gt;server.ini&lt;/code&gt;中四个参数:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;serverPort:服务端口&lt;br&gt;dashboardHttpPort:web服务端口&lt;br&gt;dataPath:数据存储路径&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;bin/&lt;code&gt;env.ini&lt;/code&gt;需要修改为不同端口号:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;JMX_PORT:JMX端口号&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;然后启动2个目录下的bin/&lt;code&gt;metaServer.sh&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;##更多&lt;br&gt;&lt;a href=&quot;http://jameswxx.iteye.com/blog/2034111&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;metaq架构原理&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/killme2008/node-zk-browser&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;node-zk-browser&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;p&gt;##介绍&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;metaQ淘宝开源的一个Java消息中间件,它参考kafka并在其基础上做了许多改进优化.&lt;br&gt;具体介绍请看&lt;a href=&quot;https://github.com/killme2008/Metamorphosis
+    
+    </summary>
+    
+      <category term="学习" scheme="https://zeshawne.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="生活" scheme="https://zeshawne.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="学习" scheme="https://zeshawne.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>简易版连接池</title>

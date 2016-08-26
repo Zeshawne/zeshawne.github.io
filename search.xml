@@ -20,9 +20,9 @@
 <p>更多:<br>bin/metaServer.sh help</p>
 </blockquote>
 <p>windows不支持local模式,需要单独配置zookeeper.</p>
-<h2 id="集群配置"><a href="#集群配置" class="headerlink" title="集群配置"></a>集群配置</h2><h2 id="zookeeper配置"><a href="#zookeeper配置" class="headerlink" title="zookeeper配置"></a>zookeeper配置</h2><p><a href="https://zookeeper.apache.org/releases.html#download" target="_blank" rel="external">点击此处下载zookeeper</a></p>
+<h2 id="集群配置"><a href="#集群配置" class="headerlink" title="集群配置"></a>集群配置</h2><h3 id="zookeeper配置"><a href="#zookeeper配置" class="headerlink" title="zookeeper配置"></a>zookeeper配置</h3><p><a href="https://zookeeper.apache.org/releases.html#download" target="_blank" rel="external">点击此处下载zookeeper</a></p>
 <p>参考conf/<code>server_sample.ini</code>配置conf/<code>server_.ini</code></p>
-<h2 id="Local-metaQ集群配置"><a href="#Local-metaQ集群配置" class="headerlink" title="Local metaQ集群配置"></a>Local metaQ集群配置</h2><p>复制metaQ目录到不同目录,更改conf/<code>server.ini</code>中四个参数:</p>
+<h3 id="Local-metaQ集群配置"><a href="#Local-metaQ集群配置" class="headerlink" title="Local metaQ集群配置"></a>Local metaQ集群配置</h3><p>复制metaQ目录到不同目录,更改conf/<code>server.ini</code>中四个参数:</p>
 <blockquote>
 <p>serverPort:服务端口<br>dashboardHttpPort:web服务端口<br>dataPath:数据存储路径</p>
 </blockquote>

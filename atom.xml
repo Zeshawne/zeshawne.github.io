@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zeshawne.github.io/"/>
-  <updated>2016-08-26T10:40:50.868Z</updated>
+  <updated>2016-08-26T10:43:41.036Z</updated>
   <id>https://zeshawne.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://zeshawne.github.io/2016/08/25/metaQ%20+%20zookeeper/"/>
     <id>https://zeshawne.github.io/2016/08/25/metaQ + zookeeper/</id>
     <published>2016-08-25T15:00:12.000Z</published>
-    <updated>2016-08-26T10:40:50.868Z</updated>
+    <updated>2016-08-26T10:43:41.036Z</updated>
     
     <content type="html">&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;metaQ淘宝开源的一个Java消息中间件,它参考kafka并在其基础上做了许多改进优化.&lt;br&gt;具体介绍请看&lt;a href=&quot;https://github.com/killme2008/Metamorphosis/wiki&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Metamorphosis-wiki&lt;/a&gt;&lt;/p&gt;
@@ -36,9 +36,9 @@
 &lt;p&gt;更多:&lt;br&gt;bin/metaServer.sh help&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;windows不支持local模式,需要单独配置zookeeper.&lt;/p&gt;
-&lt;h2 id=&quot;集群配置&quot;&gt;&lt;a href=&quot;#集群配置&quot; class=&quot;headerlink&quot; title=&quot;集群配置&quot;&gt;&lt;/a&gt;集群配置&lt;/h2&gt;&lt;h2 id=&quot;zookeeper配置&quot;&gt;&lt;a href=&quot;#zookeeper配置&quot; class=&quot;headerlink&quot; title=&quot;zookeeper配置&quot;&gt;&lt;/a&gt;zookeeper配置&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://zookeeper.apache.org/releases.html#download&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;点击此处下载zookeeper&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;集群配置&quot;&gt;&lt;a href=&quot;#集群配置&quot; class=&quot;headerlink&quot; title=&quot;集群配置&quot;&gt;&lt;/a&gt;集群配置&lt;/h2&gt;&lt;h3 id=&quot;zookeeper配置&quot;&gt;&lt;a href=&quot;#zookeeper配置&quot; class=&quot;headerlink&quot; title=&quot;zookeeper配置&quot;&gt;&lt;/a&gt;zookeeper配置&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://zookeeper.apache.org/releases.html#download&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;点击此处下载zookeeper&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;参考conf/&lt;code&gt;server_sample.ini&lt;/code&gt;配置conf/&lt;code&gt;server_.ini&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id=&quot;Local-metaQ集群配置&quot;&gt;&lt;a href=&quot;#Local-metaQ集群配置&quot; class=&quot;headerlink&quot; title=&quot;Local metaQ集群配置&quot;&gt;&lt;/a&gt;Local metaQ集群配置&lt;/h2&gt;&lt;p&gt;复制metaQ目录到不同目录,更改conf/&lt;code&gt;server.ini&lt;/code&gt;中四个参数:&lt;/p&gt;
+&lt;h3 id=&quot;Local-metaQ集群配置&quot;&gt;&lt;a href=&quot;#Local-metaQ集群配置&quot; class=&quot;headerlink&quot; title=&quot;Local metaQ集群配置&quot;&gt;&lt;/a&gt;Local metaQ集群配置&lt;/h3&gt;&lt;p&gt;复制metaQ目录到不同目录,更改conf/&lt;code&gt;server.ini&lt;/code&gt;中四个参数:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;serverPort:服务端口&lt;br&gt;dashboardHttpPort:web服务端口&lt;br&gt;dataPath:数据存储路径&lt;/p&gt;
 &lt;/blockquote&gt;

@@ -389,139 +389,14 @@
 <p>JMX_PORT:JMX端口号</p>
 </blockquote>
 <p>然后启动2个目录下的bin/<code>metaServer.sh</code></p>
+<p></p><h3>Tips</h3><p></p>
+<blockquote>
+<ul>
+<li>配置不成功,请查阅日志追踪错误信息</li>
+</ul>
+</blockquote>
 <p></p><h2>更多</h2><br><a href="http://jameswxx.iteye.com/blog/2034111" target="_blank" rel="external">metaq架构原理</a><br><a href="https://github.com/killme2008/node-zk-browser" target="_blank" rel="external">node-zk-browser</a><p></p>
 
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/07/04/简易版连接池/" itemprop="url">
-                  简易版连接池
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-04T20:01:55+08:00" content="2016-07-04">
-              2016-07-04
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/学习/" itemprop="url" rel="index">
-                    <span itemprop="name">学习</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/07/04/简易版连接池/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/04/简易版连接池/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/07/04/简易版连接池/" class="leancloud_visitors" data-flag-title="简易版连接池">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><code>JDBCUtils.java</code><br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.zeshawne.utils.jdbc;</div><div class="line"></div><div class="line"><span class="keyword">import</span> javax.sql.DataSource;</div><div class="line"><span class="keyword">import</span> java.io.InputStream;</div><div class="line"><span class="keyword">import</span> java.io.PrintWriter;</div><div class="line"><span class="keyword">import</span> java.lang.reflect.InvocationHandler;</div><div class="line"><span class="keyword">import</span> java.lang.reflect.Method;</div><div class="line"><span class="keyword">import</span> java.lang.reflect.Proxy;</div><div class="line"><span class="keyword">import</span> java.sql.Connection;</div><div class="line"><span class="keyword">import</span> java.sql.DriverManager;</div><div class="line"><span class="keyword">import</span> java.sql.SQLException;</div><div class="line"><span class="keyword">import</span> java.sql.SQLFeatureNotSupportedException;</div><div class="line"><span class="keyword">import</span> java.util.LinkedList;</div><div class="line"><span class="keyword">import</span> java.util.Properties;</div><div class="line"><span class="keyword">import</span> java.util.logging.Logger;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JDBCUtils</span> <span class="keyword">implements</span> <span class="title">DataSource</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> LinkedList&lt;Connection&gt; listConnections = <span class="keyword">new</span> LinkedList&lt;&gt;();</div><div class="line"></div><div class="line">    <span class="keyword">static</span> &#123;</div><div class="line">        InputStream is = ConnectionFactory.class.getClassLoader().getResourceAsStream(<span class="string">"db.properties"</span>);</div><div class="line">        Properties prop = <span class="keyword">new</span> Properties();</div><div class="line"></div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            prop.load(is);</div><div class="line">            String driver = prop.getProperty(<span class="string">"driver"</span>);</div><div class="line">            String url = prop.getProperty(<span class="string">"url"</span>);</div><div class="line">            String username = prop.getProperty(<span class="string">"username"</span>);</div><div class="line">            String password = prop.getProperty(<span class="string">"password"</span>);</div><div class="line">            <span class="keyword">int</span> jdbcPoolInitSize = Integer.parseInt(prop.getProperty(<span class="string">"jdbcPoolInitSize"</span>));</div><div class="line">            Class.forName(driver);</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; jdbcPoolInitSize; i++) &#123;</div><div class="line">                Connection conn = DriverManager.getConnection(url, username, password);</div><div class="line">                listConnections.add(conn);</div><div class="line">            &#125;</div><div class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> ExceptionInInitializerError(e);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> ConnectionFactory <span class="title">getInstance</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">new</span> ConnectionFactory();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> Connection <span class="title">getConnection</span><span class="params">()</span> <span class="keyword">throws</span> SQLException </span>&#123;</div><div class="line">        <span class="keyword">if</span> (listConnections.size() &gt; <span class="number">0</span>) &#123;</div><div class="line">            <span class="keyword">final</span> Connection conn = listConnections.removeFirst();</div><div class="line">            <span class="keyword">return</span> (Connection) Proxy.newProxyInstance(ConnectionFactory.class.getClassLoader(), <span class="keyword">new</span> Class[]&#123;Connection.class&#125;, <span class="keyword">new</span> InvocationHandler() &#123;</div><div class="line">                        <span class="meta">@Override</span></div><div class="line">                        <span class="function"><span class="keyword">public</span> Object <span class="title">invoke</span><span class="params">(Object proxy, Method method, Object[] args)</span> <span class="keyword">throws</span> Throwable </span>&#123;</div><div class="line">                            <span class="keyword">if</span> (!method.getName().equals(<span class="string">"close"</span>)) &#123;</div><div class="line">                                <span class="keyword">return</span> method.invoke(conn, args);</div><div class="line">                            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                                listConnections.add(conn);</div><div class="line">                                <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">                            &#125;</div><div class="line">                        &#125;</div><div class="line">                    &#125;);</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            <span class="comment">//TODO缓存队列</span></div><div class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"连接池已满,稍候再试!"</span>);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> Connection <span class="title">getConnection</span><span class="params">(String username, String password)</span> <span class="keyword">throws</span> SQLException </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="keyword">public</span> &lt;T&gt; <span class="function">T <span class="title">unwrap</span><span class="params">(Class&lt;T&gt; iface)</span> <span class="keyword">throws</span> SQLException </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isWrapperFor</span><span class="params">(Class&lt;?&gt; iface)</span> <span class="keyword">throws</span> SQLException </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> PrintWriter <span class="title">getLogWriter</span><span class="params">()</span> <span class="keyword">throws</span> SQLException </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setLogWriter</span><span class="params">(PrintWriter out)</span> <span class="keyword">throws</span> SQLException </span>&#123;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setLoginTimeout</span><span class="params">(<span class="keyword">int</span> seconds)</span> <span class="keyword">throws</span> SQLException </span>&#123;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getLoginTimeout</span><span class="params">()</span> <span class="keyword">throws</span> SQLException </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> Logger <span class="title">getParentLogger</span><span class="params">()</span> <span class="keyword">throws</span> SQLFeatureNotSupportedException </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<pre><code>懒癌发作...
-待完善
-</code></pre>
           
         
       
@@ -590,7 +465,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">1</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zeshawne.github.io/"/>
-  <updated>2016-08-26T10:43:41.036Z</updated>
+  <updated>2016-09-02T03:04:36.532Z</updated>
   <id>https://zeshawne.github.io/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <link href="https://zeshawne.github.io/2016/08/25/metaQ%20+%20zookeeper/"/>
     <id>https://zeshawne.github.io/2016/08/25/metaQ + zookeeper/</id>
     <published>2016-08-25T15:00:12.000Z</published>
-    <updated>2016-08-26T10:43:41.036Z</updated>
+    <updated>2016-09-02T03:04:36.532Z</updated>
     
     <content type="html">&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;metaQ淘宝开源的一个Java消息中间件,它参考kafka并在其基础上做了许多改进优化.&lt;br&gt;具体介绍请看&lt;a href=&quot;https://github.com/killme2008/Metamorphosis/wiki&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Metamorphosis-wiki&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;metaQ是淘宝开源的一个Java消息中间件,它参考kafka并在其基础上做了许多改进优化.&lt;br&gt;具体介绍请看&lt;a href=&quot;https://github.com/killme2008/Metamorphosis/wiki&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Metamorphosis-wiki&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&quot;下载&quot;&gt;&lt;a href=&quot;#下载&quot; class=&quot;headerlink&quot; title=&quot;下载&quot;&gt;&lt;/a&gt;下载&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://code.google.com/archive/p/meta-queue/downloads&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;点击此处下载metaQ&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;配置&quot;&gt;&lt;a href=&quot;#配置&quot; class=&quot;headerlink&quot; title=&quot;配置&quot;&gt;&lt;/a&gt;配置&lt;/h2&gt;&lt;p&gt;解压下载后的压缩包,其目录结构为:&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;21&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;22&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;23&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;24&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;25&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;26&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;27&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;28&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;29&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;30&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;31&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;32&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;33&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;├─bin&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      env.bat&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      env.sh&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      localMetaServer.bat&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      log4j.properties&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      metaServer.bat&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      metaServer.sh&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      tools_log4j.properties&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├─conf&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      async_slave.properties&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      gregor_slave.properties&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      jettyBroker.properties&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      notifyadaper&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      notifySlave.properties&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      sample.server.ini&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      samsa_master.properties&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      server.ini&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      timetunnel.properties&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├─lib&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      ...&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      zkclient-0.3.jar&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      zookeeper-3.4.3.jar&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├─logs&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      metaServer.log&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      slave.log&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      timetunnel.log&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│      transfer.log&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;└─provided&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        README`&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
@@ -58,7 +58,7 @@
     <summary type="html">
     
       &lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;metaQ淘宝开源的一个Java消息中间件,它参考kafka并在其基础上做了许多改进优化.&lt;br&gt;具体介绍请看&lt;a
+&lt;p&gt;metaQ是淘宝开源的一个Java消息中间件,它参考kafka并在其基础上做了许多改进优化.&lt;br&gt;具体介绍请看&lt;
     
     </summary>
     
